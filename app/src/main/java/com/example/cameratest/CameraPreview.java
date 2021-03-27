@@ -1,3 +1,4 @@
+/*
 package com.example.cameratest;
 
 import android.content.Context;
@@ -55,7 +56,7 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
             }
             Camera.Parameters parameters = mCamera.getParameters();
 
-            /* 화면 회전시 코드
+            //화면 회전시 코드
             if(getResources().getConfiguration().orientation != Configuration.ORIENTATION_LANDSCAPE){
                 parameters.set("orientation", "portrait");
                 mCamera.setDisplayOrientation(90);
@@ -65,7 +66,7 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
                 mCamera.setDisplayOrientation(0);
                 parameters.setRotation(0);
             }
-            */
+
             parameters.set("orientation", "portrait");
 
             //포커스 모드 부분
@@ -97,7 +98,6 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
             mCamera.stopPreview();
             Camera.Parameters parameters = mCamera.getParameters();
 
-            /*
             //회전시 코드
             int rotation = MainActivity.getInstance.getWindowManager().getDefaultDisplay().getRotation();
             if (rotation == Surface.ROTATION_0) {
@@ -113,7 +113,6 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
                 mCamera.setDisplayOrientation(180);
                 parameters.setRotation(180);
             }
-            */
 
             parameters.setPreviewSize(previewSize.width, previewSize.height);
             mCamera.setParameters(parameters);
@@ -200,3 +199,23 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
         main.bm = rbm;
     }
 }
+*/
+
+
+    /*
+    public static Camera getCamera(){
+        return mCamera;
+    }
+
+    private void setInit(){
+        getInstance = this;
+        mCamera = Camera.open();
+
+        setContentView(R.layout.activity_main);
+        surfaceView = (CameraPreview)findViewById(R.id.preview);
+
+        holder = surfaceView.getHolder();
+        holder.addCallback(surfaceView);
+        holder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
+    }
+    */
